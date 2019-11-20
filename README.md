@@ -22,3 +22,11 @@
   <mt:ContentsFooter></ul></mt:ContentsFooter>
 </mt:Contents>
 ```
+
+IDが取得できたら、以下のようにIDを指定してコンテンツタイプのデータを取得します。  
+なお、コンテンツフィールドで複数選択が可能な場合は、`MTCDRelatedSource`の返値がIDのカンマ区切りとなります。
+
+```
+<mt:CDRelatedSource field_id="30" related_id="$cd_id" setvar="id" />
+<mt:Contents content_type="商品セット" id="$id"><mt:ContentLabel /></mt:Contents>
+```
