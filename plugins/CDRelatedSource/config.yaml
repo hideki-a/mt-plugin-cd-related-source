@@ -1,0 +1,9 @@
+id: cdrelatedsource
+name: CDRelatedSource
+version: 1.0
+author_name: Hideki Abe
+author_link: https://www.anothersky.pw/
+
+tags:
+    function:
+        CDRelatedSource: $cdrelatedsource::CDRelatedSource::Tags::_hdlr_cd_related_source
