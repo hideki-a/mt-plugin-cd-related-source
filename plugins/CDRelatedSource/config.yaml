@@ -1,8 +1,10 @@
 id: cdrelatedsource
-name: CDRelatedSource
+name: <__trans phrase="Contents Data Related Source Plugin">
 version: 1.0
-author_name: Hideki Abe
+description: <__trans phrase="_PLUGIN_DESCRIPTION">
+author_name: <__trans phrase="_PLUGIN_AUTHOR">
 author_link: https://www.anothersky.pw/
+l10n_class: CDRelatedSource::L10N
 
 tags:
     function:
