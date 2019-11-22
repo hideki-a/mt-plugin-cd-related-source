@@ -6,7 +6,7 @@ use vars qw( %Lexicon );
 
 %Lexicon = (
     'Contents Data Related Source Plugin' => 'リンク元コンテンツデータ取得プラグイン',
-    '_PLUGIN_DESCRIPTION' => 'あるコンテンツデータにおいて自身を参照しているコンテンツデータのIDを取得するタグを提供します。',
+    '_PLUGIN_DESCRIPTION' => 'あるコンテンツデータにおいて自身を参照しているコンテンツデータを取得するタグを提供します。',
     '_PLUGIN_AUTHOR' => '安倍 英樹'
 );
 

@@ -7,5 +7,5 @@ author_link: https://www.anothersky.pw/
 l10n_class: CDRelatedSource::L10N
 
 tags:
-    function:
-        CDRelatedSource: $cdrelatedsource::CDRelatedSource::Tags::_hdlr_cd_related_source
+    block:
+        CDRelatedSources: $cdrelatedsource::CDRelatedSource::Tags::_hdlr_cd_related_sources
