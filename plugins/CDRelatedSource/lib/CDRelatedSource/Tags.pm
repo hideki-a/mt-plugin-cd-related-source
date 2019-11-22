@@ -11,10 +11,11 @@ sub _hdlr_cd_related_sources {
         || $ctx->error(MT->translate('You used an [_1] tag outside of the proper context.', 'CDRelatedSources'));
 
     # Detect content field id.
+    my $content_type_id = $ctx->stash('content_type')->id;
     my $field_id;
     if ($args->{field_name}) {
         my @fields = MT::ContentField->load(
-            {   content_type_id => $args->{content_type_id},
+            {   related_content_type_id => $content_type_id,
                 name => encode_utf8($args->{field_name})
             }
         );

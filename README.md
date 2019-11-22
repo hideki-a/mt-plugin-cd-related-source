@@ -19,7 +19,7 @@
     <mt:ContentID setvar="content_data_id" />
     <dt><mt:ContentLabel /></dt>
     <dd>
-    <mt:CDRelatedSources field_name="含まれる商品" content_type_id="1" related_id="$content_data_id">
+    <mt:CDRelatedSources field_name="含まれる商品" related_id="$content_data_id">
       <mt:If name="__first__"><ul></mt:If>
         <li><mt:ContentLabel /></li>
       <mt:If name="__last__"></ul></mt:If>
