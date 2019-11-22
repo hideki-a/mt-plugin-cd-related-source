@@ -20,8 +20,6 @@ sub _hdlr_cd_related_source {
         });
 
         for my $field (@fields) {
-            use MyDebugger;
-            MyDebugger::doLog($field->id);
             $field_id = $field->id;
         }
     } else {
