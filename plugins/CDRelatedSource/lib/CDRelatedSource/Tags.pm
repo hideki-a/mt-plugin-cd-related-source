@@ -8,7 +8,7 @@ sub _hdlr_cd_related_sources {
 
     my $blog_id = $ctx->stash('blog')->id;
     my $cd = $ctx->stash('content_type')
-        || $ctx->error(MT->translate('You used an [_1] tag outside of the proper context.', 'CDRelatedSources'));
+        || $ctx->error(MT->translate('You used an [_1] tag outside of the proper context.', 'ContentRelatedSources'));
 
     # Detect content field id.
     my $content_type_id = $ctx->stash('content_type')->id;

@@ -2,7 +2,7 @@
 
 ## 概要
 
-あるコンテンツデータにおいて自身を参照しているコンテンツデータを取得するブロックタグ`MTCDRelatedSources`を提供します。  
+あるコンテンツデータにおいて自身を参照しているコンテンツデータを取得するブロックタグ`MTContentRelatedSources`を提供します。  
 Movable Type 7用です。
 
 ## 解説
@@ -23,11 +23,11 @@ Movable Type 7用です。
       <dt>担当セミナー</dt>
       <dd>
         <mt:ContentID setvar="speaker_id" />
-        <mt:CDRelatedSources field_name="登壇講師" related_id="$speaker_id">
+        <mt:ContentRelatedSources field_name="登壇講師" related_id="$speaker_id">
           <mt:If name="__first__"><ul></mt:If>
           <li><mt:ContentField content_field="セミナー名称"><mt:ContentFieldValue escape /></mt:ContentField></li>
           <mt:If name="__last__"></ul></mt:If>
-        </mt:CDRelatedSources>
+        </mt:ContentRelatedSources>
       </dd>
     </div>
   </dl>
@@ -45,11 +45,11 @@ Movable Type 7用です。
       <dt>担当セミナー</dt>
       <dd>
         <mt:ContentID setvar="speaker_id" />
-        <mt:CDRelatedSources field_id="35" related_id="$speaker_id">
+        <mt:ContentRelatedSources field_id="35" related_id="$speaker_id">
           <mt:If name="__first__"><ul></mt:If>
           <li><mt:ContentField content_field="セミナー名称"><mt:ContentFieldValue escape /></mt:ContentField></li>
           <mt:If name="__last__"></ul></mt:If>
-        </mt:CDRelatedSources>
+        </mt:ContentRelatedSources>
       </dd>
     </div>
   </dl>

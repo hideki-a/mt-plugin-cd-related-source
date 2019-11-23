@@ -1,5 +1,5 @@
 id: cdrelatedsource
-name: <__trans phrase="Contents Data Related Source Plugin">
+name: <__trans phrase="Content Related Sources Plugin">
 version: 1.0
 description: <__trans phrase="_PLUGIN_DESCRIPTION">
 author_name: <__trans phrase="_PLUGIN_AUTHOR">
@@ -8,4 +8,4 @@ l10n_class: CDRelatedSource::L10N
 
 tags:
     block:
-        CDRelatedSources: $cdrelatedsource::CDRelatedSource::Tags::_hdlr_cd_related_sources
+        ContentRelatedSources: $cdrelatedsource::CDRelatedSource::Tags::_hdlr_cd_related_sources
