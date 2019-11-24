@@ -6,7 +6,6 @@ use utf8;
 sub _hdlr_cd_related_sources {
     my ($ctx, $args, $cond) = @_;
 
-    my $blog_id = $ctx->stash('blog')->id;
     my $cd = $ctx->stash('content_type')
         || $ctx->error(MT->translate('You used an [_1] tag outside of the proper context.', 'ContentRelatedSources'));
 
@@ -31,7 +30,8 @@ sub _hdlr_cd_related_sources {
     my @contents_field_idxs = MT::ContentFieldIndex->load(
         {   content_field_id => $field_id,
             value_integer => $args->{related_id}
-        }
+        },
+        { fetchonly => ['content_data_id'] }
     );
     for my $contents_field_idx (@contents_field_idxs) {
         push(@source_ids, $contents_field_idx->content_data_id);
@@ -45,8 +45,7 @@ sub _hdlr_cd_related_sources {
         { column => 'id',          desc => $direction },
     ];
     my @contents = MT::ContentData->load(
-        {   blog_id => $blog_id,
-            id => \@source_ids,
+        {   id => \@source_ids,
             status => MT::ContentStatus::RELEASE()
         },
         $args
