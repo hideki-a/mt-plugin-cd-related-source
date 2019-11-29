@@ -4,8 +4,7 @@ function smarty_block_mtcontentrelatedsources($args, $out, &$ctx, &$repeat)
     $localvars = array(
         'content',
         '_content_data',
-        '_content_data_counter',
-        common_loop_vars()
+        '_content_data_counter'
     );
 
     $context = $ctx->stash('content');
@@ -14,7 +13,7 @@ function smarty_block_mtcontentrelatedsources($args, $out, &$ctx, &$repeat)
     }
 
     if (!isset($out)) {
-        $ctx->localize($localvars);
+        $ctx->localize($localvars, common_loop_vars());
 
         # Detect content field id.
         if (isset($args['field_name'])) {
@@ -97,7 +96,7 @@ function smarty_block_mtcontentrelatedsources($args, $out, &$ctx, &$repeat)
         $ctx->__stash['vars']['__last__'] = ($counter == count($content_data_array));
         $repeat = true;
     } else {
-        $ctx->restore($localvars);
+        $ctx->restore($localvars, common_loop_vars());
         $repeat = false;
     }
 
